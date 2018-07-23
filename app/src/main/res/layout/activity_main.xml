@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/ibSelect"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_select_all_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/ibUp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/ibSelect"
+        app:layout_constraintEnd_toEndOf="@+id/ibSelect"
+        app:layout_constraintStart_toStartOf="@+id/ibSelect" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/ibDown"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+        app:layout_constraintEnd_toEndOf="@+id/ibSelect"
+        app:layout_constraintStart_toStartOf="@+id/ibSelect"
+        app:layout_constraintTop_toBottomOf="@+id/ibSelect" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/ibLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ibSelect"
+        app:layout_constraintEnd_toStartOf="@+id/ibSelect"
+        app:layout_constraintTop_toTopOf="@+id/ibSelect" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/ibRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ibSelect"
+        app:layout_constraintStart_toEndOf="@+id/ibSelect"
+        app:layout_constraintTop_toTopOf="@+id/ibSelect" />
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/jsV"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ibDown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ibUp"
+        custom:JV_backgroundColor="#bdbdbd"
+        custom:JV_borderColor="#000"
+        custom:JV_borderWidth="4dp"
+        custom:JV_buttonColor="#000"
+        custom:JV_buttonSizeRatio="25%"
+        custom:JV_fixedCenter="false" />
+
+    <Button
+        android:id="@+id/btTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btMessage"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btTest" />
+
+    <Switch
+        android:id="@+id/swTilt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/tilt_controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/swRotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/rotation_controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swTilt" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ControllerApp</string>
+    <string name="controller_app">Controller App</string>
+    <string name="default_uri">http://192.168.43.238:8080</string>
+    <string name="message">Message</string>
+    <string name="tilt_controller">Tilt Controller</string>
+    <string name="rotation_controller">Rotation Controller</string>
+    <string name="test">Test</string>
+</resources>
